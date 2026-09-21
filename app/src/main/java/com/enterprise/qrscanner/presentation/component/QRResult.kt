@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -51,10 +52,12 @@ fun QRResult(
                     modifier = Modifier.height(12.dp)
                 )
 
-                Text(
-                    text = value,
-                    style = MaterialTheme.typography.bodyLarge
-                )
+                SelectionContainer {
+                    Text(
+                        text = value,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
 
                 Spacer(
                     modifier = Modifier.height(16.dp)
